@@ -8,13 +8,13 @@ class TestUser < Minitest::Test
 	end
 
 	def test_assert_that_usernames_are_strings
-		username = brittney
+		username = "brittney"
 		assert_equal(String, set_up_username(username))
 	end
 
-	def test_assert_that_username_is_boatsnack
-		my_name = 
-		assert_equal(user_name, (my_name))
-	end
+	# def test_assert_that_username_is_boatsnack
+	# 	my_name = 
+	# 	assert_equal(user_name, (my_name))
+	# end
 
 end
