@@ -27,4 +27,9 @@ class TestUser < Minitest::Test
 		assert_equal("valid", set_up_username(username))
 	end
 
+	def test_assert_that_email_is_string
+		email = "brittney@code.com"
+		assert_equal(String, set_up_email(email))
+	end
+
 end
