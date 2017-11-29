@@ -10,7 +10,13 @@ def set_up_username(username)
 	end
 end
 
-def set_up_email(email)
+def set_up_email(email, reenter_email)
 	email = email.to_s
-	email.class
+	if email = reenter_email
+		"valid"
+	else
+		"invalid"
+	end
+
+
 end
