@@ -17,6 +17,8 @@ def set_up_email(email, reenter_email)
 	else
 		"invalid"
 	end
+end
 
-
+def set_up_password(password)
+	password.class
 end

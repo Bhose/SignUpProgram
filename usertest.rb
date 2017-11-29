@@ -38,4 +38,9 @@ class TestUser < Minitest::Test
 		assert_equal("valid", set_up_email(email, reenter_email))
 	end
 
+	def test_assert_that_password_is_string
+		password = "password1"
+		assert_equal(String, set_up_password(password))
+	end
+
 end
