@@ -55,7 +55,7 @@ def password_has_lowcase(password)
 			includes_lowcase = true
 		end
 	end
-	if includes_lowcase = true
+	if includes_lowcase == true
 		return "valid"
 	else
 		return "invalid"
@@ -65,14 +65,14 @@ end
 
 def password_has_special_char(password)
 	specChar = false
-	schars = ["!", "@", "#", "$", "%", "^", "&", "*"]
+	sChars = ["!", "@", "#", "$", "%", "^", "&", "*"]
 	password = password.to_s
-	schars.each do |characters|
+	sChars.each do |characters|
 		if password.include?(characters)
 			specChar = true
 		end
 	end
-	if specChar = true
+	if specChar == true
 		return "valid"
 	else
 		return "invalid"
