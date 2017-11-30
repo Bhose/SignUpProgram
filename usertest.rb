@@ -53,4 +53,9 @@ class TestUser < Minitest::Test
 		assert_equal("invalid", set_up_password(password))
 	end
 
+	def test_assert_that_password_contains_uppercase_letter
+		password = "Password"
+		assert_equal("valid", set_up_password(password))
+	end
+
 end

@@ -26,4 +26,10 @@ def set_up_password(password)
 	else
 		"invalid"
 	end
+
+	if password =~ /[Password]/
+		"valid"
+	else
+		"invalid"
+	end
 end
