@@ -72,4 +72,9 @@ def password_has_special_char(password)
 			specChar = true
 		end
 	end
+	if specChar = true
+		return "valid"
+	else
+		return "invalid"
+	end
 end

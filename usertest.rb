@@ -63,4 +63,9 @@ class TestUser < Minitest::Test
 		assert_equal("invalid", password_has_upcase(password))
 	end
 
+	def test_assert_that_password_contains_special_chars
+		password = "P@ssword"
+		assert_equal("valid", password_has_special_char(password))
+	end
+
 end
