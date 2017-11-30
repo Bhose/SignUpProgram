@@ -20,5 +20,10 @@ def set_up_email(email, reenter_email)
 end
 
 def set_up_password(password)
-	password.class
+	password = password.to_s
+	if password.length > 7
+		"valid"
+	else
+		"invalid"
+	end
 end

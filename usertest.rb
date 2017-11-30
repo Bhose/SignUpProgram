@@ -38,9 +38,19 @@ class TestUser < Minitest::Test
 		assert_equal("valid", set_up_email(email, reenter_email))
 	end
 
-	def test_assert_that_password_is_string
-		password = "password1"
-		assert_equal(String, set_up_password(password))
+	# def test_assert_that_password_is_string
+	# 	password = "password1"
+	# 	assert_equal(String, set_up_password(password))
+	# end
+
+	def test_assert_that_password_is_8_characters
+		password = "password"
+		assert_equal("valid", set_up_password(password))
+	end
+
+	def test_assert_that_password_with_5_chars_is_invalid
+		password = "hi"
+		assert_equal("invalid", set_up_password(password))
 	end
 
 end
