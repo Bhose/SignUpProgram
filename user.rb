@@ -20,21 +20,18 @@ def set_up_email(email, reenter_email)
 end
 
 def set_up_password(password)
-	indicator = 0
-	includesCaps = false
-
-	upcase = [*('A'..'Z')]
-	# lowcase = [a..z]
-	# number = [0..9]
-	# spechar = ["!", "@", "#", "$", "%", "^", "&", "*"]
-	password = password.to_s
-
 	if password.length > 7
 		"valid"
 	else
-		"invalid"
+		return "invalid"
 	end
 
+end
+
+def password_has_upcase(password)
+	includesCaps = false
+	upcase = [*('A'..'Z')]
+	password = password.to_s
 	upcase.each do |letter|
 		if password.include?(letter)
 			 includesCaps = true
@@ -43,15 +40,36 @@ def set_up_password(password)
 
 	if includesCaps == true
 		return "valid"
-	else 
+	end
+	if includesCaps == false
 		return "invalid"
 	end
+end
+
+def password_has_lowcase(password)
+	includes_lowcase = false
+	lowcase = [*('a'..'z')]
+	password = password.to_s
+	lowcase.each do |lowCletters|
+		if password.include?(lowCletters)
+			includes_lowcase = true
+		end
+	end
+	if includes_lowcase = true
+		return "valid"
+	else
+		return "invalid"
+	end
+end
 
 
-# if password =~ /[Password]/#will this work for any password with caps?
-	# 	"valid"
-	# end
-	# if password =~ /password/
-	# 	"invalid"
-	# end
+def password_has_special_char(password)
+	specChar = false
+	schars = ["!", "@", "#", "$", "%", "^", "&", "*"]
+	password = password.to_s
+	schars.each do |characters|
+		if password.include?(characters)
+			specChar = true
+		end
+	end
 end

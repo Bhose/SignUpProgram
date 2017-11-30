@@ -48,19 +48,19 @@ class TestUser < Minitest::Test
 	# 	assert_equal("valid", set_up_password(password))
 	# end
 
-	# def test_assert_that_password_with_5_chars_is_invalid
-	# 	password = "hi"
-	# 	assert_equal("invalid", set_up_password(password))
-	# end
+	def test_assert_that_password_with_5_chars_is_invalid
+		password = "hTi"
+		assert_equal("invalid", set_up_password(password))
+	end
 
 	def test_assert_that_password_contains_uppercase_letters
 		password = "Password"
-		assert_equal("valid", set_up_password(password))
+		assert_equal("valid", password_has_upcase(password))
 	end
 
 	def test_assert_that_password_with_no_uppercase_is_invalid
 		password = "lowercase"
-		assert_equal("invalid", set_up_password(password))
+		assert_equal("invalid", password_has_upcase(password))
 	end
 
 end
