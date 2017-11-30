@@ -111,5 +111,12 @@ def password_is_valid(password)
 	else
 		"invalid"
 	end
+end
 
+def password_matches(password, reenter_password)
+	if password == reenter_password
+		"valid"
+	else
+		"invalid"
+	end
 end

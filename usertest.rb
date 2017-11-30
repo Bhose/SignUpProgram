@@ -88,4 +88,12 @@ class TestUser < Minitest::Test
 		assert_equal("valid", password_is_valid(password))
 	end
 
+	def test_assert_that_password_is_correct
+		password = "Pa$$w0rd"
+		reenter_password = "Pa$$w0rd"
+		assert_equal("valid", password_matches(password, reenter_password))
+	end
+
+
+
 end
