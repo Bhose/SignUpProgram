@@ -100,5 +100,15 @@ class TestUser < Minitest::Test
 		assert_equal("invalid", password_matches(password, reenter_password))
 	end
 
+	def test_assert_that_all_fields_are_valid
+		username = "brittney"
+		email = "brittney@code.com"
+		reenter_email = "brittney@code.com"
+		password = "Pa$$w0rd"
+		reenter_password = "Pa$$w0rd"
+		assert_equal("Congratulations!", congrats(username, email, reenter_email, password, reenter_password))
+	end
+
+
 
 end

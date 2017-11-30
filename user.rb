@@ -120,3 +120,20 @@ def password_matches(password, reenter_password)
 		"invalid"
 	end
 end
+
+def congrats(username, email, reenter_email, password, reenter_password)
+	if set_up_username(username) == "valid" &&
+		set_up_email(email, reenter_email) == "valid" &&
+		set_up_password(password) == "valid" &&
+		password_has_upcase(password) == "valid" &&
+		password_has_lowcase(password) == "valid" &&
+		password_contains_num(password) == "valid" &&
+		password_has_special_char(password) == "valid" &&
+		password_contains_num(password) == "valid" &&
+		password_is_valid(password) == "valid" &&
+		password_matches(password, reenter_password) == "valid"
+		"Congratulations!"
+	else
+		"try again"
+	end
+end
