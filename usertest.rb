@@ -83,4 +83,9 @@ class TestUser < Minitest::Test
 		assert_equal("invalid", password_contains_num(password))
 	end
 
+	def test_assert_that_pw_has_all_requirements
+		password = "Pa$$w0rd"
+		assert_equal("valid", password_is_valid(password))
+	end
+
 end

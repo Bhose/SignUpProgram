@@ -94,3 +94,22 @@ def password_contains_num(password)
 		return "invalid"
 	end
 end
+
+def password_is_valid(password)
+	contains_num = password_contains_num(password)
+	contains_low = password_has_lowcase(password)
+	contains_up = password_has_upcase(password)
+	contains_sChar = password_has_special_char(password)
+	length_requirement = set_up_password(password)
+
+	if contains_num == "valid" &&
+	   contains_low == "valid" &&
+	   contains_up == "valid" &&
+	   contains_sChar == "valid" &&
+	   length_requirement == "valid"
+	   "valid"
+	else
+		"invalid"
+	end
+
+end
