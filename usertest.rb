@@ -73,4 +73,9 @@ class TestUser < Minitest::Test
 		assert_equal("invalid", password_has_special_char(password))
 	end
 
+	def test_assert_that_password_contains_number
+		password = "passw0rd"
+		assert_equal("valid", password_contains_num(password))
+	end
+
 end

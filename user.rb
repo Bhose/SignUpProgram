@@ -78,3 +78,19 @@ def password_has_special_char(password)
 		return "invalid"
 	end
 end
+
+def password_contains_num(password)
+	num = false
+	numbers = [*(0..9)]
+	password = password.to_s
+	numbers.each do |digits|
+		if password.include?(digits.to_s)
+			num = true
+		end
+	end
+	if num == true
+		return "valid"
+	else
+		return "invalid"
+	end
+end
